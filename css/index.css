@@ -352,7 +352,6 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -10rem;
   /* text-align: center; */
 }
 .home h2 {
@@ -410,11 +409,6 @@ textarea {
   background-size: cover;
   position: relative;
   clip-path: polygon(0 25vh, 100% 0, 100% 100%, 0 100%);
-  scroll-margin-top: -9.75rem;
-}
-
-.services .container {
-  margin-top: -10rem;
 }
 
 .services h2 {
@@ -451,7 +445,6 @@ textarea {
   border-radius: 30px;
   margin-top: 2rem;
   transition: all 0.3s ease;
-  overflow: visible;
   padding-bottom: 4rem;
 }
 
@@ -538,10 +531,6 @@ textarea {
   background-color: var(--primary-color);
 }
 
-.about .container {
-  margin-top: -10rem;
-}
-
 .about__title {
   font-size: 3rem;
   text-align: center;
@@ -587,7 +576,6 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 96rem;
-  margin-top: -10rem;
   background-color: var(--accent-color);
 }
 
@@ -883,12 +871,37 @@ textarea {
     font-size: 1.2rem;
   }
 
+  .services,
+  .home,
+  .about,
+  .contact {
+    height: auto;
+    min-height: 100vh;
+    padding: 5rem 0;
+    scroll-margin-top: 10rem;
+  }
   .hero {
     height: 90vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(52, 73, 94, 0.9),
+        rgba(44, 62, 80, 0.95)
+      ),
+      url("../images/hero-mobile.jpg");
   }
 
-  .hero h2 {
-    font-size: 1.5rem;
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .btn--white {
+    font-size: 1.2rem !important;
+    padding: 1rem 3.5rem;
+    font-weight: 700;
+  }
+
+  .here .btn--text {
+    font-size: 1rem !important;
   }
 
   .footer__content {
@@ -980,11 +993,6 @@ textarea {
     font-size: 1.4rem;
   }
 
-  .contact .container {
-    margin-top: -20rem;
-  }
-
-  .hero,
   .services {
     background-image: none !important;
     background-color: var(--accent-color) !important;
