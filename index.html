@@ -83,7 +83,7 @@
           <i class="fas fa-bars"></i>
         </button>
         <ul class="nav__links" id="nav-links">
-          <li><a class="nav__link active" href="#section--2">Acasa</a></li>
+          <li><a class="nav__link" href="#section--2">Acasa</a></li>
           <li><a class="nav__link" href="#section--4">Despre noi</a></li>
           <li><a class="nav__link" href="#section--3">Expertiza</a></li>
           <li><a class="nav__link" href="#section--5">Contact</a></li>
@@ -380,7 +380,7 @@
           mai curând posibil.
         </p>
 
-        <form class="contact__form">
+        <form class="contact__form" name="contact" netlify>
           <div class="form-group">
             <label for="first-name" class="visually-hidden">Nume</label>
             <input
@@ -436,9 +436,9 @@
         Completează formularul, iar noi te vom contacta în maximum
         <span class="highlight">60 de minute</span>
       </h2>
-      <form class="modal__form">
+      <form class="modal__form" name="contact" netlify>
         <label>Nume:</label>
-        <input type="text" required />
+        <input type="text" name="name" required />
         <label for="phone">Număr de telefon:</label>
         <input
           type="tel"
@@ -451,7 +451,7 @@
           placeholder="07xxxxxxxx"
         />
         <label>Urgența cu care te confrunți:</label>
-        <textarea rows="10" cols="10" required></textarea>
+        <textarea rows="10" cols="10" name="message" required></textarea>
         <button class="btn--modal">Trimite &rarr;</button>
       </form>
     </div>
