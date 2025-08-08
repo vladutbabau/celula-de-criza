@@ -201,3 +201,12 @@ navLinks.addEventListener("click", function (e) {
 hamburger.addEventListener("click", function (e) {
   e.stopPropagation();
 });
+
+const btnModal = document.querySelector(".btn--modal");
+btnModal.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("S-a trimis");
+  let html = `<div class="solicitare">Solicitarea ta a fost trimisa cu success</div>`;
+  const modal = document.querySelector(".modal");
+  modal.insertAdjacentHTML("beforeend", html);
+});

@@ -807,6 +807,11 @@ textarea {
   background-image: var(--gradient-primary);
 }
 
+.modal.solicitare {
+  color: #29a71a;
+  margin: 1rem 0 0 1rem;
+}
+
 /* Hamburger button styling */
 .hamburger {
   display: none;
