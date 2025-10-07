@@ -436,8 +436,8 @@
         Completează formularul, iar noi te vom contacta în maximum
         <span class="highlight">60 de minute</span>
       </h2>
-      <form class="modal__form">
-        <label>Nume:</label>
+      <form class="modal__form" name="urgenta" netlify>
+        <label for="name">Nume:</label>
         <input type="text" name="name" required />
         <label for="phone">Număr de telefon:</label>
         <input
@@ -450,8 +450,8 @@
           required
           placeholder="07xxxxxxxx"
         />
-        <label>Urgența cu care te confrunți:</label>
-        <textarea rows="10" cols="10" name="message" required></textarea>
+        <label for="urgenta">Urgența cu care te confrunți:</label>
+        <textarea rows="10" cols="10" name="urgenta" required></textarea>
         <button class="btn--modal">Trimite &rarr;</button>
       </form>
     </div>
