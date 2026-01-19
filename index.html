@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <script
       async
@@ -13,11 +13,7 @@
       gtag("js", new Date());
       gtag("config", "G-XXXXXXXXXX");
     </script>
-    <script src="js/script.js" defer></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -42,7 +38,7 @@
       property="og:image"
       content="https://www.celuladecriza.ro/images/hero-image2.png"
     />
-    <!-- înlocuiește cu URL real -->
+    
     <meta property="og:url" content="https://www.celuladecriza.ro" />
     <meta name="twitter:card" content="summary_large_image" />
     <script src="js/script.js" defer></script>
@@ -60,7 +56,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="canonical" href="https://www.celuladecriza.ro" />
+
     <link rel="icon" href="images/favicon.ico" />
+
     <title>Celula de Criză - Intervenții rapide în situații critice</title>
   </head>
   <body>
@@ -68,7 +67,7 @@
       href="https://wa.me/40756011000?"
       target="_blank"
       class="btn-whatsapp"
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       <img src="./images/whatsapp.png" alt="WhatsApp" class="wapp-image" />
     </a>
@@ -79,6 +78,7 @@
           class="hamburger"
           id="hamburger"
           aria-label="Deschide meniul de navigație"
+          aria-expanded="false"
         >
           <i class="fas fa-bars"></i>
         </button>
@@ -98,15 +98,14 @@
 
     <section class="hero section" id="section--1">
       <div class="container container-sm">
-        <h1>
-          <p class="heading-primary--main">
-            <span class="bg-parallelogram">Răspuns</span> Rapid în Fața Crizei
-          </p>
-          <p class="heading-primary--sub">
-            Expertiză
-            <span class="bg-parallelogram">la Timpul Potrivit</span>.
-          </p>
-        </h1>
+       <h1 class="heading-primary">
+        <span class="heading-primary--main">
+          <span class="bg-parallelogram">Răspuns</span> Rapid în Fața Crizei
+        </span>
+        <span class="heading-primary--sub">
+          Expertiză <span class="bg-parallelogram">la Timpul Potrivit</span>.
+        </span>
+       </h1>
         <a href="#" class="btn btn--white btn--animated btn--show-modal">
           Solicită intervenția acum
         </a>
@@ -190,6 +189,7 @@
             <button
               class="card__toggle"
               aria-label="Deschide/inchide informatiile despre echipele specializate"
+              aria-expanded="false"
             >
               <i class="fas fa-chevron-down fa-sm"></i>
             </button>
@@ -214,6 +214,7 @@
             <button
               class="card__toggle"
               aria-label="Deschide/inchide informatiile despre specialisti"
+              aria-expanded="false"
             >
               <i class="fas fa-chevron-down"></i>
             </button>
@@ -239,6 +240,7 @@
             <button
               class="card__toggle"
               aria-label="Deschide/inchide informatiile despre detalierea crizelor"
+              aria-expanded="false"
             >
               <i class="fas fa-chevron-down xs"></i>
             </button>
@@ -267,6 +269,7 @@
             <button
               class="card__toggle"
               aria-label="Deschide/inchide informatiile despre persoanele apte"
+              aria-expanded="false"
             >
               <i class="fas fa-chevron-down"></i>
             </button>
@@ -293,6 +296,7 @@
             <button
               class="card__toggle"
               aria-label="Deschide/inchide informatiile despre consiliere"
+              aria-expanded="false"
             >
               <i class="fas fa-chevron-down"></i>
             </button>
@@ -303,10 +307,10 @@
             <h2>Intervenții de urgență</h2>
             <p>
               Crizele aflate în desfășurare necesită intervenție rapidă prin
-              coordonare multidisciplinară. Celula de Criză oferă soluții
+              coordonare multidisciplinară. O ferim soluții
               integrate prin parteneriate profesionale.
             </p>
-            <button class="card__toggle">
+            <button class="card__toggle" aria-expanded="false">
               <i class="fas fa-chevron-down"></i>
             </button>
           </div>
@@ -381,6 +385,7 @@
         </p>
 
         <form class="contact__form" name="contact" netlify>
+          <input type="hidden" name="form-name" value="contact" />
           <div class="form-group">
             <label for="first-name" class="visually-hidden">Nume</label>
             <input
@@ -437,6 +442,8 @@
         <span class="highlight">60 de minute</span>
       </h2>
       <form class="modal__form" name="urgenta" netlify>
+        <input type="hidden" name="form-name" value="urgenta" />
+
         <label for="name">Nume:</label>
         <input type="text" name="name" id="name" required />
         <label for="phone">Număr de telefon:</label>
@@ -456,19 +463,9 @@
       </form>
     </div>
     <footer class="footer">
-      <!-- <div class="container container-sm footer__content">
-        <div class="footer__left">
-          <p>celuladecriza.ro</p>
-          <p>celuladecriza.com</p>
-        </div>
 
-        <div class="footer__right">
-          
-        </div>
-      </div> -->
-
-      <div class="footer__bottom">
-        <p>&copy; 2025. Toate drepturile rezervate.</p>
+      <div class="container container-sm footer__bottom">
+        <p>&copy; 2026. Toate drepturile rezervate.</p>
       </div>
     </footer>
     <div class="overlay hidden"></div>
