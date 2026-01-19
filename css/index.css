@@ -366,7 +366,8 @@ i.fas.fa-shield-alt {
   background: none; 
   padding: 10px 20px;
   margin-top: 1.5rem;
-  font-size: 16px;
+  margin-left: 5.5rem; 
+  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   animation: blink-color 1s infinite alternate;
@@ -1002,42 +1003,6 @@ i.fas.fa-shield-alt {
 .nav__link:hover .badge-new {
   background-color: #000;
 }
-/* RESPONSIVE MOBILE */
-@media (max-width: 768px) {
-  .emergency__title {
-    font-size: 2rem;
-    flex-direction: column;
-  }
-
-  .emergency__title i {
-    font-size: 2.5rem;
-  }
-
-  .emergency__text {
-    font-size: 1.4rem;
-  }
-
-  .emergency__steps {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .emergency__steps .step {
-    width: 100%;
-  }
-
-  .btn--whatsapp {
-    width: 90%;
-    font-size: 1.5rem;
-    padding: 1.25rem 2rem;
-  }
-
-  .emergency__note {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-}
-
 
 @media (max-width: 768px) {
   /* HEADER */
@@ -1134,7 +1099,8 @@ i.fas.fa-shield-alt {
     font-size: 1rem !important;
   }
   .hero .btn--scroll-to-emergency{
-  font-size: 12px;
+  font-size: 10px;
+  margin-left: 1.5rem;
 }
 
   /* HOME */
