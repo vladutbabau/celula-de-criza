@@ -61,36 +61,6 @@ observer.observe(section1);
 
 // Sections reveal
 
-// const allSections = document.querySelectorAll(".section");
-// const allNavLinks = document.querySelectorAll(".nav__link");
-// const activateNavLink = function (id) {
-//   allNavLinks.forEach((link) => {
-//     link.classList.remove("active");
-//     if (link.getAttribute("href") === `#${id}`) {
-//       console.log(link);
-//       link.classList.add("active");
-//     }
-//   });
-// };
-// const revealSection = function (entries, observer) {
-//   entries.forEach((entry) => {
-//     if (!entry.isIntersecting) return;
-//     entry.target.classList.remove("section--hidden");
-//     const sectionId = entry.target.getAttribute("id");
-//     activateNavLink(sectionId);
-//     observer.unobserve(entry.target);
-//   });
-// };
-
-// const sectionObserver = new IntersectionObserver(revealSection, {
-//   root: null,
-//   threshold: 0,
-// });
-
-// allSections.forEach((section) => {
-//   sectionObserver.observe(section);
-//   section.classList.add("section--hidden");
-// });
 const allSections = document.querySelectorAll(".section");
 const allNavLinks = document.querySelectorAll(".nav__link");
 

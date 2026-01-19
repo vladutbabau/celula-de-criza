@@ -35,6 +35,28 @@
     transform: translate(0);
   }
 }
+/* Animație puls pentru butonul de urgență */
+@keyframes pulse-urgent {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Puls subtil pentru badge */
+@keyframes pulse-badge {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
 
 *,
 *::after,
@@ -81,6 +103,10 @@ button {
 }
 textarea {
   resize: none;
+}
+i.fas.fa-shield-alt {
+  color: #fff;
+  margin-bottom: 1rem;
 }
 .wapp-image {
   width: 50px;
@@ -195,9 +221,6 @@ textarea {
 .header .nav__links a:hover::after {
   width: 100%;
 }
-/* .header .nav__links .active:hover::after {
-  width: 0;
-} */
 
 .header .btn-help {
   border: 1px solid var(--accent-color);
@@ -384,7 +407,6 @@ textarea {
   justify-content: center;
   align-items: center;
   margin-top: -10rem;
-  /* text-align: center; */
   background-image: linear-gradient(
       to right bottom,
       rgba(52, 73, 94, 0.9),
@@ -469,17 +491,6 @@ textarea {
 .card.expanded .card__hidden {
   max-height: 300px; /* sau mai mult, în funcție de conținut */
 }
-
-/* .card__hidden {
-  overflow: hidden;
-  transition: grid-template-rows 0.4s ease;
-  display: grid;
-  grid-template-rows: 0fr;
-}
-
-.card.expanded .card__hidden {
-  grid-template-rows: 1fr;
-} */
 
 /* Lista din interiorul cardului */
 .services .card ul {
@@ -838,6 +849,176 @@ textarea {
   font-weight: 900;
 }
 
+/* SECTIUNE EMERGENCY ASSISTANCE */
+.emergency-assistance {
+  background: linear-gradient(
+      to right bottom,
+      rgba(52, 73, 94, 0.9),
+      rgba(44, 62, 80, 0.95)
+    ),
+    url("../images/emergency-bg.jpg"); /* Imagine de fundal relevantă */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  position: relative;
+  clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+}
+
+.emergency-assistance .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.emergency__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  animation: moveInLeft 1.2s ease-out;
+}
+
+.emergency__title i {
+  font-size: 3.5rem;
+  color: #f1c40f; /* icon alertă / scut galben */
+}
+
+.emergency__text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--primary-color);
+  animation: moveInBottom 1s ease-out;
+}
+
+.emergency__steps {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0 4rem 0;
+  flex-wrap: wrap;
+}
+
+.emergency__steps .step {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border-radius: 2rem;
+  padding: 2rem 1.5rem;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: moveInBottom 1.2s ease-out;
+}
+
+.emergency__steps .step:hover {
+  transform: translateY(-0.8rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.25);
+}
+
+.emergency__steps .step i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.emergency__steps .step p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.btn--whatsapp {
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1.5rem 3.5rem;
+  border-radius: 10rem;
+  text-decoration: none;
+  animation: pulse-urgent 1.2s infinite ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.emergency__note {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Badge „Nou” */
+.badge-new {
+   position: absolute;
+  top: -8px;   /* deasupra textului */
+  right: -20px; /* la marginea din dreapta */
+  display: inline-block;
+  background-color: #e74c3c; /* roșu pentru alertă */
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  animation: pulse-badge 1.5s infinite ease-in-out;
+  pointer-events: none;
+}
+.nav__link:hover .badge-new {
+  background-color: #000;
+}
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .emergency__title {
+    font-size: 2rem;
+    flex-direction: column;
+  }
+
+  .emergency__title i {
+    font-size: 2.5rem;
+  }
+
+  .emergency__text {
+    font-size: 1.4rem;
+  }
+
+  .emergency__steps {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .emergency__steps .step {
+    width: 100%;
+  }
+
+  .btn--whatsapp {
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 1.25rem 2rem;
+  }
+
+  .emergency__note {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+
 @media (max-width: 768px) {
   /* HEADER */
   .header-flex {
@@ -970,6 +1151,40 @@ textarea {
     margin-bottom: 2rem;
   }
 
+  /* EMERGENCY */
+  .emergency__title {
+    font-size: 2rem;
+    flex-direction: column;
+  }
+
+  .emergency__title i {
+    font-size: 2.5rem;
+  }
+
+  .emergency__text {
+    font-size: 1.4rem;
+  }
+
+  .emergency__steps {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .emergency__steps .step {
+    width: 100%;
+  }
+
+  .btn--whatsapp {
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 1.25rem 2rem;
+  }
+
+  .emergency__note {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
   /* ABOUT */
   .about h3 {
     font-size: 1.6rem;
@@ -1007,6 +1222,7 @@ textarea {
   .btn--modal {
     font-size: 1.4rem;
   }
+
 }
 
 
