@@ -307,7 +307,7 @@
             <h2>Intervenții de urgență</h2>
             <p>
               Crizele aflate în desfășurare necesită intervenție rapidă prin
-              coordonare multidisciplinară. O ferim soluții
+              coordonare multidisciplinară. Oferim soluții
               integrate prin parteneriate profesionale.
             </p>
             <button class="card__toggle" aria-expanded="false">
@@ -435,17 +435,17 @@
       </div>
     </section>
 
-    <div class="modal hidden">
-      <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">
+    <div class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-header">
+      <button class="btn--close-modal" aria-label="Închide formularul">&times;</button>
+      <h2 class="modal__header" id="modal-header">
         Completează formularul, iar noi te vom contacta în maximum
         <span class="highlight">60 de minute</span>
       </h2>
-      <form class="modal__form" name="urgenta" netlify>
+      <form class="modal__form" name="urgenta" method="POST" data-netlify="true" netlify>
         <input type="hidden" name="form-name" value="urgenta" />
 
         <label for="name">Nume:</label>
-        <input type="text" name="name" id="name" required />
+        <input type="text" name="name" id="name" placeholder="Numele tău" required />
         <label for="phone">Număr de telefon:</label>
         <input
           type="tel"
@@ -462,12 +462,13 @@
         <button type="submit" class="btn--modal">Trimite &rarr;</button>
       </form>
     </div>
+    <div class="overlay hidden"></div>
     <footer class="footer">
 
       <div class="container container-sm footer__bottom">
         <p>&copy; 2026. Toate drepturile rezervate.</p>
       </div>
     </footer>
-    <div class="overlay hidden"></div>
+
   </body>
 </html>
