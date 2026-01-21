@@ -332,29 +332,29 @@
 
     <p class="emergency__text">
       Faci obiectul unui control? Nu gestiona singur.<br>
+      <b>Sprijin rapid, echilibrat și profesionist – în momentele în care ai cea mai mare nevoie.</b>
       Când instituțiile statului îți bat la ușă, fiecare minut contează. 
-      Îți punem la dispoziție un serviciu de Triaj Multidisciplinar de Urgență la nivel de excelență: 
-      ne descrii în linii mari situația ta, iar noi analizăm imediat contextul și mobilizăm specialistul potrivit 
-      (avocat specializat, expert contabil, consultant fiscal sau expert tehnic).
+      Îți oferim acces imediat la un <b>serviciu de Triaj Multidisciplinar</b>, cu <b>un nivel de excelență operațională</b>.
+Echipa noastră de coordonare preia mesajele, le analizează în timp real și contactăm specialiștii potriviți cauzei tale - avocați, experți contabili, consultanți fiscali etc. - în funcție de natura situației.
     </p>
 
     <p class="emergency__text">
-      La solicitarea clientului, echipa poate asista fizic. Nu înlocuim instituțiile statului. 
-      Dar ne asigurăm că ai, lângă tine, omul potrivit, la momentul potrivit.
+      <i>La solicitarea clientului, echipa poate asista fizic (acolo unde situația o impune).<br/>
+      Instituțiile își fac treaba. Noi ne asigurăm că ai lângă tine omul potrivit care te ajută să răspunzi profesionist.</i>
     </p>
 
     <div class="emergency__steps">
       <div class="step">
         <i class="fas fa-envelope"></i>
-        <h3>Clientul transmite mesajul cu situația</h3>
+        <h3>Scrie-ne pe scurt situația ta</h3>
       </div>
       <div class="step">
         <i class="fas fa-search"></i>
-        <h3>Noi facem triajul și identificăm riscurile</h3>
+        <h3>Facem triajul și identificăm riscurile</h3>
       </div>
       <div class="step">
         <i class="fas fa-user-tie"></i>
-        <h3>Direcționăm cazul către un profesionist autorizat (avocat / expert / consultant)</h3>
+        <h3>Direcționăm cazul către un profesionist autorizat (avocat/expert/consultant)</h3>
       </div>
     </div>
 
@@ -365,12 +365,12 @@
       class="btn btn--whatsapp"
       aria-label="Trimite mesaj pe WhatsApp pentru triaj și echipă"
     >
-      AM CONTROL – SOLICIT TRIAJ ȘI ECHIPĂ
+      <b>SOLICIT ASISTENȚĂ DE URGENȚĂ</b><br/>
+VREAU SPRIJIN PROFESIONIST
     </a>
 
     <p class="emergency__note">
-      Serviciul oferit este de triaj multidisciplinar și conectare rapidă cu profesioniști autorizați. 
-      Nu oferim asistență juridică în nume propriu și nu intervenim în numele clientului în relația cu autoritățile.
+      Serviciul oferit este unul de <b>triaj multidisciplinar</b> și <b>conectare rapidă</b> cu profesioniști autorizați. Acționăm prompt pentru a conecta clientul cu profesioniști autorizați. Respectăm cadrul legal și nu oferim servicii juridice în nume propriu.
     </p>
   </div>
 </section>
@@ -444,7 +444,7 @@
           mai curând posibil.
         </p>
 
-        <form class="contact__form" name="contact" netlify>
+        <form class="contact__form" name="contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
           <div class="form-group">
             <label for="first-name" class="visually-hidden">Nume</label>
@@ -501,7 +501,7 @@
         Completează formularul, iar noi te vom contacta în maximum
         <span class="highlight">60 de minute</span>
       </h2>
-      <form class="modal__form" name="urgenta" method="POST" data-netlify="true" netlify>
+      <form class="modal__form" name="urgenta" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="urgenta" />
 
         <label for="name">Nume:</label>
@@ -518,7 +518,7 @@
           placeholder="07xxxxxxxx"
         />
         <label for="urgenta">Urgența cu care te confrunți:</label>
-        <textarea rows="10" cols="10" name="urgenta" required></textarea>
+        <textarea rows="10" cols="10" name="mesaj_urgenta" required></textarea>
         <button type="submit" class="btn--modal">Trimite &rarr;</button>
       </form>
     </div>
