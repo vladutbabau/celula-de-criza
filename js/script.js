@@ -180,4 +180,7 @@ hamburger.addEventListener("click", function (e) {
   e.stopPropagation();
 });
 
-
+//PWA
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js");
+}
