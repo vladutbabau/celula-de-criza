@@ -8,13 +8,8 @@
   "icons": [
     {
       "src": "/images/cdecriZa.jpg",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/cdecriZa.jpg",
-      "sizes": "512x512",
-      "type": "image/png"
+      "sizes": "192x192 512x512 1024x1024",
+      "type": "image/jpg"
     }
   ]
 }
